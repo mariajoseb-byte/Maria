@@ -4,65 +4,36 @@
 <head>
     <meta charset="UTF-8">
     <title>Iniciar sesión</title>
+     <link rel="stylesheet" href="css/login.css">
 </head>
 
 <body>
 
-    <table width="100%" border="1">
-        <tr>
-            <td align="center">
-                <h1>🏀 EL BALONCESTO 🏀</h1>
-                <h2>Iniciar sesión</h2>
-            </td>
-        </tr>
-    </table>
+    <header>
+        <h1>🏀 EL BALONCESTO 🏀</h1>
+        <h2>Iniciar sesión</h2>
+    </header>
 
-    <br>
+    <main>
+        <form action="index.html">
+            <div>
+                <label for="usuario">Usuario:</label>
+                <input type="text" id="usuario" name="usuario">
+            </div>
 
-    <table border="1" align="center" cellpadding="10">
+            <div>
+                <label for="contrasena">Contraseña:</label>
+                <input type="password" id="contrasena" name="contraseña">
+            </div>
 
-        <tr>
-            <td>
-                <label>Usuario:</label>
-            </td>
+            <button type="submit">Iniciar sesión</button>
+        </form>
 
-            <td>
-                <input type="text" name="usuario">
-            </td>
-        </tr>
-
-        <tr>
-            <td>
-                <label>Contraseña:</label>
-            </td>
-
-            <td>
-                <input type="password" name="contraseña">
-            </td>
-        </tr>
-
-        <tr>
-            <td colspan="2" align="center">
-
-                <a href="index.html">
-                    <button type="button">Iniciar sesión</button>
-                </a>
-
-            </td>
-        </tr>
-
-    </table>
-
-    <br>
-
-    <table width="100%">
-        <tr>
-            <td align="center">
-                ¿No tienes una cuenta?
-                <a href="register.html">Registrarse</a>
-            </td>
-        </tr>
-    </table>
+        <p>
+            ¿No tienes una cuenta?
+            <a href="register.html">Registrarse</a>
+        </p>
+    </main>
 
 </body>
 

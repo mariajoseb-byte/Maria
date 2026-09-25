@@ -1,0 +1,172 @@
+/* ==========================================
+   VARIABLES DE COLOR Y TEMA
+   ========================================== */
+:root {
+    --color-primary: #ea580c;       /* Naranja baloncesto */
+    --color-primary-hover: #c2410c; /* Naranja oscuro */
+    --color-dark: #0f172a;          /* Azul/Gris muy oscuro (encabezado) */
+    --color-light: #f8fafc;         /* Gris claro (fondo de página) */
+    --color-card: #ffffff;          /* Blanco (tarjeta contenedor) */
+    --color-text: #334155;          /* Gris oscuro (texto general) */
+    --color-border: #cbd5e1;        /* Gris borde */
+}
+
+/* ==========================================
+   ESTILOS GENERALES Y RESET
+   ========================================== */
+body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    line-height: 1.6;
+    background-color: var(--color-light);
+    color: var(--color-text);
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+}
+
+/* Ocultar etiquetas de salto de línea antiguas */
+br {
+    display: none;
+}
+
+/* Anular bordes por defecto de las tablas HTML */
+table {
+    border-collapse: collapse;
+    border: none !important;
+}
+
+td {
+    border: none !important;
+}
+
+/* ==========================================
+   TABLA 1: ENCABEZADO
+   ========================================== */
+body > table:nth-of-type(1) {
+    width: 100% !important;
+    background-color: var(--color-dark);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+body > table:nth-of-type(1) td {
+    padding: 2.5rem 1rem 2rem 1rem;
+}
+
+body > table:nth-of-type(1) h1 {
+    margin: 0;
+    font-size: 2.2rem;
+    color: var(--color-primary);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+body > table:nth-of-type(1) h2 {
+    margin: 0.5rem 0 0 0;
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: #94a3b8;
+}
+
+/* ==========================================
+   TABLA 2: TARJETA DE FORMULARIO DE REGISTRO
+   ========================================== */
+body > table:nth-of-type(2) {
+    max-width: 420px;
+    width: 90%;
+    margin: 3rem auto 1rem auto;
+    background-color: var(--color-card);
+    padding: 2rem 1.5rem;
+    border-radius: 12px;
+    border-top: 5px solid var(--color-primary) !important;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.08), 0 8px 10px -6px rgba(0, 0, 0, 0.04);
+}
+
+body > table:nth-of-type(2) td {
+    padding: 8px 4px;
+}
+
+label {
+    display: block;
+    font-weight: 600;
+    color: var(--color-dark);
+    font-size: 0.95rem;
+    white-space: nowrap;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-size: 1rem;
+    font-family: inherit;
+    background-color: #fafafa;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+    outline: none;
+    background-color: #ffffff;
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px rgba(234, 88, 12, 0.2);
+}
+
+/* Botón y enlace dentro de la tabla */
+body > table:nth-of-type(2) a {
+    display: block;
+    width: 100%;
+    text-decoration: none;
+}
+
+button[type="button"] {
+    width: 100%;
+    background-color: var(--color-primary);
+    color: white;
+    border: none;
+    padding: 12px;
+    font-size: 1rem;
+    font-weight: 700;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 0.8rem;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+button[type="button"]:hover {
+    background-color: var(--color-primary-hover);
+}
+
+button[type="button"]:active {
+    transform: scale(0.98);
+}
+
+/* ==========================================
+   TABLA 3: PIE DE PÁGINA (ENLACE DE INICIO DE SESIÓN)
+   ========================================== */
+body > table:nth-of-type(3) {
+    max-width: 420px;
+    width: 90%;
+    margin: 1rem auto 3rem auto;
+    font-size: 0.95rem;
+    color: #64748b;
+}
+
+body > table:nth-of-type(3) td {
+    padding-top: 1.25rem;
+    border-top: 1px solid var(--color-border) !important;
+}
+
+body > table:nth-of-type(3) a {
+    color: var(--color-primary);
+    font-weight: 600;
+    text-decoration: none;
+    margin-left: 0.25rem;
+}
+
+body > table:nth-of-type(3) a:hover {
+    text-decoration: underline;
+    color: var(--color-primary-hover);
+}

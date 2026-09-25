@@ -1,0 +1,149 @@
+/* ==========================================
+   VARIABLES DE COLOR Y TEMA
+   ========================================== */
+:root {
+    --color-primary: #ea580c;       /* Naranja baloncesto */
+    --color-primary-hover: #c2410c; /* Naranja oscuro */
+    --color-dark: #0f172a;          /* Azul/Gris muy oscuro (encabezado) */
+    --color-light: #f8fafc;         /* Gris claro (fondo de página) */
+    --color-card: #ffffff;          /* Blanco (tarjeta contenedor) */
+    --color-text: #334155;          /* Gris oscuro (texto general) */
+    --color-border: #e2e8f0;        /* Gris borde suave */
+}
+
+/* ==========================================
+   ESTILOS GENERALES Y RESET
+   ========================================== */
+body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    line-height: 1.6;
+    background-color: var(--color-light);
+    color: var(--color-text);
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+}
+
+/* Ocultar etiquetas <br> antiguas */
+br {
+    display: none;
+}
+
+/* Anular bordes HTML por defecto de las tablas */
+table {
+    border-collapse: collapse;
+    border: none !important;
+}
+
+/* ==========================================
+   TABLA 1: ENCABEZADO
+   ========================================== */
+body > table:nth-of-type(1) {
+    width: 100% !important;
+    background-color: var(--color-dark);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+body > table:nth-of-type(1) td {
+    padding: 2.5rem 1rem 2rem 1rem;
+    border: none !important;
+}
+
+body > table:nth-of-type(1) h1 {
+    margin: 0;
+    font-size: 2.2rem;
+    color: var(--color-primary);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+body > table:nth-of-type(1) h2 {
+    margin: 0.5rem 0 0 0;
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: #94a3b8;
+}
+
+/* ==========================================
+   TABLA 2: TABLA DE PERSONAS REGISTRADAS
+   ========================================== */
+body > table:nth-of-type(2) {
+    max-width: 650px;
+    width: 90% !important;
+    margin: 3rem auto 1.5rem auto;
+    background-color: var(--color-card);
+    border-radius: 12px;
+    overflow: hidden; /* Mantiene bordes redondeados limpios */
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.08), 0 8px 10px -6px rgba(0, 0, 0, 0.04);
+    border-top: 5px solid var(--color-primary) !important;
+}
+
+/* Encabezados de la tabla (th) */
+body > table:nth-of-type(2) th {
+    background-color: var(--color-dark);
+    color: #ffffff;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+    padding: 14px 16px;
+    border: none !important;
+}
+
+/* Celdas de datos (td) */
+body > table:nth-of-type(2) td {
+    padding: 14px 16px;
+    border-bottom: 1px solid var(--color-border) !important;
+    border-top: none !important;
+    border-left: none !important;
+    border-right: none !important;
+    font-size: 0.95rem;
+}
+
+/* Filas alternadas (Zebra striping) */
+body > table:nth-of-type(2) tr:nth-child(even) {
+    background-color: #f8fafc;
+}
+
+/* Efecto hover al pasar el cursor sobre cada fila de la lista */
+body > table:nth-of-type(2) tr:not(:first-child):hover {
+    background-color: #ffedd5; /* Naranja muy suave al pasar el mouse */
+    transition: background-color 0.2s ease;
+}
+
+/* Destacar la columna con el número de posición */
+body > table:nth-of-type(2) td:first-child {
+    font-weight: bold;
+    color: var(--color-primary);
+}
+
+/* ==========================================
+   TABLA 3: PIE DE PÁGINA (ENLACE DE VOLVER)
+   ========================================== */
+body > table:nth-of-type(3) {
+    max-width: 650px;
+    width: 90% !important;
+    margin: 1.5rem auto 3rem auto;
+}
+
+body > table:nth-of-type(3) td {
+    border: none !important;
+    padding: 1rem 0;
+}
+
+body > table:nth-of-type(3) a {
+    display: inline-block;
+    color: var(--color-primary);
+    font-weight: 600;
+    text-decoration: none;
+    padding: 10px 20px;
+    border: 2px solid var(--color-primary);
+    border-radius: 8px;
+    transition: all 0.2s ease;
+}
+
+body > table:nth-of-type(3) a:hover {
+    background-color: var(--color-primary);
+    color: #ffffff;
+    transform: translateY(-2px);
+}

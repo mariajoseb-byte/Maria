@@ -1,0 +1,155 @@
+
+/* ==========================================
+   VARIABLES DE COLOR Y TEMA
+   ========================================== */
+:root {
+    --color-primary: #ea580c;       /* Naranja baloncesto */
+    --color-primary-hover: #c2410c; /* Naranja oscuro al pasar el cursor */
+    --color-dark: #0f172a;          /* Azul/Gris muy oscuro (encabezado) */
+    --color-light: #f8fafc;         /* Gris claro (fondo de página) */
+    --color-card: #ffffff;          /* Blanco (tarjeta contenedor) */
+    --color-text: #334155;          /* Gris oscuro (texto general) */
+    --color-border: #cbd5e1;        /* Gris borde */
+}
+
+/* ==========================================
+   ESTILOS GENERALES Y BASE
+   ========================================== */
+body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    line-height: 1.6;
+    background-color: var(--color-light);
+    color: var(--color-text);
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ==========================================
+   ENCABEZADO (HEADER)
+   ========================================== */
+header {
+    background-color: var(--color-dark);
+    color: white;
+    text-align: center;
+    padding: 2.5rem 1rem 2rem 1rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.2rem;
+    color: var(--color-primary);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+header h2 {
+    margin: 0.5rem 0 0 0;
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: #94a3b8;
+}
+
+/* ==========================================
+   CONTENEDOR PRINCIPAL (MAIN)
+   ========================================== */
+main {
+    flex: 1;
+    max-width: 400px;
+    width: 90%;
+    margin: 3rem auto;
+    background-color: var(--color-card);
+    padding: 2.5rem 2rem;
+    border-radius: 12px;
+    border-top: 5px solid var(--color-primary);
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.08), 0 8px 10px -6px rgba(0, 0, 0, 0.04);
+    box-sizing: border-box;
+}
+
+/* ==========================================
+   FORMULARIO Y CAMPOS
+   ========================================== */
+form div {
+    margin-bottom: 1.25rem;
+}
+
+label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 0.4rem;
+    color: var(--color-dark);
+    font-size: 0.95rem;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-size: 1rem;
+    font-family: inherit;
+    background-color: #fafafa;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+    outline: none;
+    background-color: #ffffff;
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px rgba(234, 88, 12, 0.2);
+}
+
+/* ==========================================
+   BOTÓN DE ENVÍO
+   ========================================== */
+button[type="submit"] {
+    width: 100%;
+    background-color: var(--color-primary);
+    color: white;
+    border: none;
+    padding: 12px;
+    font-size: 1rem;
+    font-weight: 700;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 0.5rem;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: var(--color-primary-hover);
+}
+
+button[type="submit"]:active {
+    transform: scale(0.98);
+}
+
+/* ==========================================
+   ENLACE DE REGISTRO
+   ========================================== */
+main > p {
+    text-align: center;
+    margin-top: 1.5rem;
+    padding-top: 1.25rem;
+    border-top: 1px solid var(--color-border);
+    font-size: 0.95rem;
+    color: #64748b;
+}
+
+main > p a {
+    color: var(--color-primary);
+    font-weight: 600;
+    text-decoration: none;
+    margin-left: 0.25rem;
+}
+
+main > p a:hover {
+    text-decoration: underline;
+    color: var(--color-primary-hover);
+}
